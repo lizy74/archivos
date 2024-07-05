@@ -1,0 +1,80 @@
+robots.txt
+El archivo robots.txt es un estándar que debes utilizar desde el minuto 0. Es el lugar donde se indica que partes de tu web van a ser visibles y cuales no a los ojos de los buscadores. Se coloca en la raiz de tu sitio, con el nombre robots.txt, y ayuda a los rastreadores de los motores de busqueda a saber que zonas pueden entrar.
+
+Por dentro debe ser de la siguiente manera.
+
+User-agent: *
+Disallow: /img/
+Allow: /img/miarchivo.html
+En el ejemplo se le esta indicando a todos los motores que tienen prohibido rastrear la carpeta /img/, pero sí un archivo en concreto dentro de la carpeta.
+
+Si quisieramos que fuera rasteable toda la web.
+
+User-agent: *
+En caso que tuvieramos un Sitemap.xml, deberíamos indicarselo con una ruta absoluta.
+
+User-agent: *
+Sitemap: http://ejemplo.com/sitemap.xml
+humans.txt
+Es el archivo con los créditos. Se indica quienes son los autores, medios de contacto, cuentas de redes sociales de cada uno, agradecimientos, estándares que sigue el sitio, tecnología usada, fecha de la creación…
+
+Crea un archivo plano en la raiz de vuestro sitio con el nombre humans.txt. Y dentro la siguiente estructura:
+
+
+/* TEAM */
+
+    Tu cargo dentro del proyecto: Tu nombre.
+    Contact: E-mail, enlace a formulario de contacto,...
+    Twitter: tu nombre de usuario en Twitter.
+    From: Ciudad, Comunidad, País.
+
+                        [...]
+
+/* THANKS */
+
+	Name: nombre o url
+                        [...]
+
+/* SITE */
+
+    Last update: YYYY/MM/DD
+    Standards: HTML5, CSS3,..
+    Components: Modernizr, jQuery, etc.
+Un ejemplo podría ser:
+
+
+/* TEAM */
+
+	UI developer: Juan Perico
+	Twitter: @juanjuan
+	From: Barcelona, Catalonia, Spain
+
+	Graphic designer: María Robledo
+	Twitter: @marimari
+	From: Alcaraz, Albacete, Spain
+
+	Web designer: Sonia Sánchez
+	Twitter: @soniasonia
+	From: Sevilla, Andalucia, Spain
+
+/* THANKS */
+
+	EN Translator: barack Obama
+	Twitter: @obamaobama
+	From: Kapiolani, EEUU
+
+/* SITE */
+	Last update: 2012/02/04
+	Language: Català / Czech / Deutsch / English / Castellano / Japanese / Dutch / Russian / Chinese
+	Doctype: HTML5
+	IDE: Sublime Text, Notepad++, FileZilla, Photoshop
+Después podéis vincularlo en el head de vuestro HTML.
+
+<link type="text/plain" rel="author" href="humans.txt" />
+security.txt
+El más reciente y el más interesante a nivel de seguridad. Permite indicar un email o enlace de contacto para informar de problemas en tu web y la clave pública.
+
+Se forma de la misma manera que los otros. Crea un archivo plano en la raiz de vuestro sitio con el nombre security.txt. Y dentro la siguiente estructura:
+
+Contact: bugs@ejemplo.com
+Encryption: https://ejemplo.com/pgp-key.txt
